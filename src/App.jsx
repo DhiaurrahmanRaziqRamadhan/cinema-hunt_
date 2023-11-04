@@ -5,19 +5,15 @@ import Footer from "./components/Footer"
 import Content from "./components/Content"
 
 const App = () => {
+  document.body.classList.add('bg-slate-900');
+  
   const imgUrl = import.meta.env.VITE_IMGURL
   const [sliderImages, setSliderImages] = useState([])
   const [popularMovies, setPopularMovies] = useState([])
 
   useEffect(() => {
-    // console.log(popularMovies)
     getMovieList().then((result) => {
       setPopularMovies(result)
-    })
-  }, [])
-
-  useEffect(() => {
-    getMovieList().then((result) => {
       setSliderImages(result)
     })
   }, [])
