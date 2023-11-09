@@ -27,7 +27,7 @@ const ImageSlider = ({ currentIndex, posterSlider, prevSlides, nextSlides, gotoS
           <BsChevronRight onClick={nextSlides} size={30}/>
         </div>
 
-        <div className="hidden xl:block xl:absolute bottom-0 left-[50%] -translate-x-[50%]">
+        <div className="absolute bottom-0 left-[50%] -translate-x-[50%]">
           <div className="flex justify-center items-center">
             {posterSlider.map((slide, slideIndex) => (
               <div 
